@@ -40,6 +40,19 @@ a {
     }
 }
 
+.file {
+    width: 5rem;
+    &--github {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+    &__name {
+        font-weight: 400;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
 .home {
     display: flex;
     justify-content: center;
@@ -64,6 +77,62 @@ a {
         font-weight: 400;
     }
     @include breakpoints(mobile) {
-        width: 30rem;
+        width: 35rem;
     }
 }
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    &__text {
+        width: 85%;
+        font-size: 1.3rem;
+    }
+}
+
+.btn {
+    &--contact {
+        text-decoration: underline;
+        color: #2d6cdf;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.3rem;
+    gap: 2rem;
+    & a {
+        text-decoration: underline;
+        position: relative;
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+            &::before {
+                height: 100%;
+            }
+        }
+        &::before {
+            content: '';
+            background: #3b79ee;
+            color: #fff;
+            z-index: -1;
+            position: absolute;
+            width: 100%;
+            height: 0;
+            bottom: 0;
+            transition: height .3s ease-in-out;
+        }
+    }
+    @include breakpoints(mobile) {
+        flex-direction: column;
+    }
+}
+

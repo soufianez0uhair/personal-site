@@ -29,6 +29,17 @@ a {
     font-size: 1.1rem;
     text-align: center; }
 
+.file {
+  width: 5rem; }
+  .file--github {
+    position: absolute;
+    top: 10%;
+    left: 10%; }
+  .file__name {
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-align: center; }
+
 .home {
   display: flex;
   justify-content: center;
@@ -49,6 +60,50 @@ a {
   .project__name {
     text-align: center;
     font-weight: 400; }
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 550px) {
     .project {
-      width: 30rem; } }
+      width: 35rem; } }
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; }
+  .about__text {
+    width: 85%;
+    font-size: 1.3rem; }
+
+.btn--contact {
+  text-decoration: underline;
+  color: #2d6cdf; }
+  .btn--contact:hover {
+    text-decoration: none; }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.3rem;
+  gap: 2rem; }
+  .contact a {
+    text-decoration: underline;
+    position: relative; }
+    .contact a:hover {
+      text-decoration: none;
+      color: #fff; }
+      .contact a:hover::before {
+        height: 100%; }
+    .contact a::before {
+      content: '';
+      background: #3b79ee;
+      color: #fff;
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      height: 0;
+      bottom: 0;
+      transition: height .3s ease-in-out; }
+  @media screen and (max-width: 550px) {
+    .contact {
+      flex-direction: column; } }
