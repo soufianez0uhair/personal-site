@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+@import './mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.folder {
+    width: 4.5rem;
+    &--home {
+        position: absolute;
+        top: 60%;
+        right: 30%;
+    }
+    &__name {
+        font-weight: 400;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 2rem;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem;
+    align-items: center;
+    gap: 3rem;
+}
+
+.project {
+    width: 50rem;
+    &__name {
+        text-align: center;
+        font-weight: 400;
+    }
+    @include breakpoints(mobile) {
+        width: 30rem;
+    }
+}
