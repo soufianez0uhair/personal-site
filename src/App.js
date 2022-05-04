@@ -6,7 +6,7 @@ import Portfolio from './pages/Portfolio'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/personal-site">
       <Routes>
         <Route path="/" element={<System />} />
         <Route path="/home" element={<Home />} />
